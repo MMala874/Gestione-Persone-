@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="coffee">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Modulo inserimento</title>
+</head>
+<body>
+    <h1>Modulo inserimento</h1>
+    <form method="POST">
+        <fieldset>
+            <legend>Dati personali</legend><br>
+            
+            <label class="input input-bordered flex items-center gap-2">
+                Nome
+                <input type="text" class="grow" placeholder="Marco" id="name" name="name"/>
+              </label><br> 
+
+              <label class="input input-bordered flex items-center gap-2">
+                Cognome
+                <input type="text" class="grow" placeholder="Malagodi" id="surname" name="surname"/>
+              </label><br>
+
+              <label class="input input-bordered flex items-center gap-2">
+                Email
+                <input type="text" class="grow" placeholder="marco@gmail.com" id="email" name="email"/>
+              </label><br>
+
+              <label class="input input-bordered flex items-center gap-2">
+                Data di Nascita
+                <input type="date" class="grow" id="birthdate" name="birthdate"/>
+              </label><br>
+
+              <label class="input input-bordered flex items-center gap-2">
+                Telefono
+                <input type="text" class="grow" placeholder="327XXXXXXX" id="phone" name="phone"/>
+              </label><br>
+
+              <label class="input input-bordered flex items-center gap-2">
+                Paese
+                <input type="text" class="grow" placeholder="Italia" id="country" name="country"/>
+              </label><br>
+
+              <label class="input input-bordered flex items-center gap-2">
+                Provincia
+                <input type="text" class="grow" placeholder="Brescia" id="province" name="province"/>
+              </label><br>
+            
+        </fieldset>
+
+        <div>
+            <button type="button" onclick="aggiungiPersona()" class="btn btn-outline">Aggiungi Persona</button>
+            <button type="button" onclick="aggiornaTabella()" class="btn btn-outline">Aggiorna tabella</button>
+            <button type="submit" class="btn btn-outline">Invia Modulo</button>
+        </div>
+        <br>
+        <div class="divider divider-primary"></div>
+        <br>  
+    </form>
+    <div class="overflow-x-auto">
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Cognome</th>
+                <th>Email</th>
+                <th>Data di Nascita</th>
+                <th>Numero di Telefono</th>
+                <th>Paese</th>
+                <th>Provincia</th>
+            </tr>
+        </thead>
+        <tbody id="personTable">
+
+        </tbody>
+    </table>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
